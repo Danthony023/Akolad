@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Home1 from "../assets/images/Home1.png";
 import RectangleDesign from "../assets/images/RectangleDesign.png";
+import RectangleDesign2 from "../assets/images/RectangleDesign2.png";
 import HighlightBg from "../assets/images/highlight-bg.png";
 import Highlight1 from "../assets/images/highlight1.png";
 import Highlight2 from "../assets/images/highlight2.png";
@@ -189,9 +190,15 @@ export default function Home() {
         {/* Contact Form */}
         <section
           id="contact-form"
-          className="w-full flex justify-center rounded-lg"
+          className="relative w-full flex justify-center rounded-lg"
         >
-          <div className="p-6 md:w-2/3 rounded-lg">
+          <img
+            src={RectangleDesign2}
+            alt="Logo"
+            className="hidden xl:block absolute z-0 bottom-0 right-0 w-auto"
+          />
+
+          <div className="relative z-10 p-6 md:w-2/3 rounded-lg">
             <h3 className="text-2xl font-semibold text-center mb-4 text-primary">
               Contact Us
             </h3>
