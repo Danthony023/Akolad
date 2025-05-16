@@ -1,14 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaEnvelope,
-  FaPhone,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import Logo from "../assets/images/logo.png";
+import { FaFacebookF, FaXTwitter, FaYoutube } from "react-icons/fa6";
 
 export default function Footer() {
   const navigate = useNavigate();
@@ -69,9 +63,10 @@ export default function Footer() {
               </ul>
               {/* Social Icons */}
               <div className="flex space-x-4 mt-4 text-black text-lg">
-                <FaFacebook className="cursor-pointer hover:text-gray-300" />
-                <FaTwitter className="cursor-pointer hover:text-gray-300" />
+                <FaFacebookF className="cursor-pointer hover:text-gray-300" />
                 <FaInstagram className="cursor-pointer hover:text-gray-300" />
+                <FaXTwitter className="cursor-pointer hover:text-gray-300" />
+                <FaYoutube className="cursor-pointer hover:text-gray-300" />
               </div>
             </div>
           </div>
