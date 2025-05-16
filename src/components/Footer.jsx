@@ -18,7 +18,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="mt-12">
+    <footer className="mt-12 z-20">
       {/* Primary footer */}
       <div className="bg-primary text-white px-6 md:px-30 py-8 grid grid-cols-1 md:grid-cols-2">
         {/* Navigation Pages */}
