@@ -138,7 +138,7 @@ export default function Login() {
             </div>
 
             {/* Login Form */}
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form className="space-y-6 md:mx-[20vw]" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
                   Username

@@ -1,10 +1,13 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import React from "react";
+import React, { useEffect } from "react";
 import Home1 from "../assets/images/Home1.png";
 import RectangleDesign from "../assets/images/RectangleDesign.png";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const achievements = [
     {
       title: "200+ Athletes Trained",
