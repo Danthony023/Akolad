@@ -1,8 +1,8 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import React, { useEffect } from "react";
-import Home1 from "../assets/images/Home1.png";
-import RectangleDesign from "../assets/images/RectangleDesign.png";
+import Home1 from "../assets/images/home1.png";
+import RectangleDesign from "../assets/images/rectangleDesign.png";
 
 const About = () => {
   useEffect(() => {
