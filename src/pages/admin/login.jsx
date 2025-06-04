@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import RectangleDesign from "../../assets/images/RectangleDesign.png";
-import RectangleDesign2 from "../../assets/images/RectangleDesign2.png";
+import RectangleDesign from "../../assets/images/rectangleDesign.png";
+import RectangleDesign2 from "../../assets/images/rectangleDesign2.png";
 import { ArrowRight, Eye, EyeOff, Lock, User, Shield } from "lucide-react";
 import { useAuth } from "../../AuthContext";
 
