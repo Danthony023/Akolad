@@ -3,9 +3,9 @@ import Footer from "../components/Footer";
 import React, { useEffect } from "react";
 import Player1 from "../assets/images/player1.png";
 import Player2 from "../assets/images/player2.png";
-import RectangleDesign from "../assets/images/RectangleDesign.png";
+import RectangleDesign from "../assets/images/rectangleDesign.png";
 
-import RectangleDesign2 from "../assets/images/RectangleDesign2.png";
+import RectangleDesign2 from "../assets/images/rectangleDesign2.png";
 
 const Athletes = () => {
   useEffect(() => {
