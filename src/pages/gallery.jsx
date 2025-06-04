@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import React, { useEffect } from "react";
 import TournamentImage from "../assets/images/pastevent.png";
 import HandballImage from "../assets/images/liveevent.png";
-import RectangleDesign from "../assets/images/RectangleDesign.png";
+import RectangleDesign from "../assets/images/rectangleDesign.png";
 import Highlight2 from "../assets/images/highlight2.png";
 import Highlight3 from "../assets/images/highlight3.png";
 import Gallery1 from "../assets/images/gallery1.png";
@@ -13,7 +13,7 @@ import Gallery4 from "../assets/images/gallery4.png";
 import Player1 from "../assets/images/highlight3.png";
 import Player2 from "../assets/images/highlight3.png";
 
-import RectangleDesign2 from "../assets/images/RectangleDesign2.png";
+import RectangleDesign2 from "../assets/images/rectangleDesign2.png";
 
 const Gallery = () => {
   useEffect(() => {
