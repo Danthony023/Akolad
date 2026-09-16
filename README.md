@@ -1,12 +1,18 @@
-# AKOLAD CONCEPTS
+<p align="center">
+  <img src="./src/assets/images/logo.png" alt="Akolad Concepts Logo" width="220"/>
+</p>
 
-A modern sports development web application for **AKOLAD CONCEPTS** — a sports academy dedicated to nurturing athletic talent, organizing top-tier sports events, and empowering the next generation of champions.
+<h1 align="center">AKOLAD CONCEPTS</h1>
+
+<p align="center">
+  A modern sports development web application — nurturing athletic talent, organizing top-tier sports events, and empowering the next generation of champions.
+</p>
 
 ---
 
 ## 🏆 About the Project
 
-AKOLAD CONCEPTS provides a platform for athlete development, competitive event management, and community engagement. The web app consists of a public-facing website and a protected admin panel for managing athletes and academy operations.
+AKOLAD CONCEPTS is a full-featured sports academy web platform with a public-facing site for fans, athletes, and visitors — plus a protected admin panel for managing the academy's operations and athlete roster.
 
 ---
 
@@ -27,25 +33,40 @@ AKOLAD CONCEPTS provides a platform for athlete development, competitive event m
 
 ```
 akolad/
-├── public/                  # Static assets
+├── public/                        # Static assets
 ├── src/
 │   ├── assets/
-│   │   └── images/          # Image assets (logos, gallery, highlights, etc.)
+│   │   ├── images/                # Image assets
+│   │   │   ├── logo.png           # App logo
+│   │   │   ├── home1.png          # Hero image
+│   │   │   ├── highlight1-3.png   # Highlights section images
+│   │   │   ├── gallery1-4.png     # Gallery images
+│   │   │   ├── player1-2.png      # Athlete profile images
+│   │   │   ├── liveevent.png      # Live events image
+│   │   │   ├── pastevent.png      # Past events image
+│   │   │   ├── rectangleDesign.png
+│   │   │   └── rectangleDesign2.png
+│   │   └── live_events.jsx        # Live events data/component asset
 │   ├── components/
-│   │   ├── Navbar.jsx        # Public site navigation bar
-│   │   ├── AdminNavbar.jsx   # Admin panel navigation bar
-│   │   └── Footer.jsx        # Site-wide footer
+│   │   ├── Navbar.jsx             # Public site navigation bar
+│   │   ├── AdminNavbar.jsx        # Admin panel navigation bar
+│   │   ├── Footer.jsx             # Site-wide footer
+│   │   └── live_events.jsx        # Live events shared component
 │   ├── pages/
-│   │   ├── home.jsx          # Landing page
-│   │   ├── about.jsx         # About page (vision, mission, achievements)
+│   │   ├── home.jsx               # Landing page (hero, highlights, gallery, contact)
+│   │   ├── about.jsx              # About page (vision, mission, achievements)
+│   │   ├── athletes.jsx           # Public athletes listing page
+│   │   ├── player.jsx             # Individual athlete profile page
+│   │   ├── live_events.jsx        # Live & past events page
+│   │   ├── gallery.jsx            # Photo gallery page
 │   │   └── admin/
-│   │       ├── login.jsx     # Admin login page
-│   │       ├── dashboard.jsx # Admin dashboard (profile & analytics)
-│   │       └── athletes.jsx  # Athletes management (CRUD)
-│   ├── App.jsx               # Root component & route definitions
-│   ├── AuthContext.jsx       # Authentication context & provider
-│   ├── ProtectedRoute.jsx    # Route guard for admin pages
-│   └── main.jsx              # App entry point
+│   │       ├── login.jsx          # Admin login page
+│   │       ├── dashboard.jsx      # Admin dashboard (profile & analytics)
+│   │       └── athletes.jsx       # Athletes management (CRUD)
+│   ├── App.jsx                    # Root component & route definitions
+│   ├── AuthContext.jsx            # Authentication context & provider
+│   ├── ProtectedRoute.jsx         # Route guard for admin pages
+│   └── main.jsx                   # App entry point
 ├── index.html
 ├── vite.config.js
 ├── eslint.config.js
@@ -57,15 +78,18 @@ akolad/
 ## ✨ Features
 
 ### Public Site
-- **Home Page** — Hero section, highlights gallery, photo gallery, and contact form
+- **Home Page** — Hero section with tagline, highlights grid, photo gallery preview, and contact form
 - **About Page** — Academy story, vision & mission statements, and key achievements
-- **Smooth Scroll** — Contact form scroll navigation from any page section
+- **Athletes Page** — Grid listing of all academy athletes with profile previews
+- **Player Profile Page** — Individual athlete detail page with bio, achievements, and stats & performance
+- **Live Events Page** — Upcoming events with date/time/location cards, plus a past events archive
+- **Gallery Page** — Full photo gallery with hover animations and a contact CTA
+- **Smooth Scroll** — Contact form scroll navigation triggered from any page
 
-### Admin Panel
-- **Protected Routes** — Token-based authentication guards all admin pages
+### Admin Panel *(Protected)*
 - **Login Page** — Admin sign-in with credential validation
-- **Dashboard** — Welcome screen with admin profile card and analytics overview (total athletes, new signups)
-- **Athletes Management** — Full CRUD interface for managing athlete profiles including sport, position, contact info, and status
+- **Dashboard** — Welcome screen with admin profile card and analytics (total athletes, new signups)
+- **Athletes Management** — Full CRUD interface for managing athlete profiles (sport, position, contact, status)
 
 ---
 
@@ -80,7 +104,7 @@ akolad/
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/Danthony023/Akolad.git
 cd akolad
 
 # Install dependencies
@@ -112,7 +136,7 @@ npm run lint
 
 ## 🔐 Authentication
 
-Authentication is currently handled via `localStorage` using an `authToken` and `userData` key. The `AuthContext` provider manages login/logout state across the app, and `ProtectedRoute` redirects unauthenticated users away from admin pages.
+Authentication is handled via `localStorage` using an `authToken` and `userData` key. The `AuthContext` provider manages login/logout state across the app, and `ProtectedRoute` redirects unauthenticated users away from all `/admin/*` pages.
 
 > **Note:** The current login implementation uses mock data. To connect to a real backend, update the `login` function in [`src/AuthContext.jsx`](./src/AuthContext.jsx) with your actual API endpoint.
 
@@ -124,6 +148,10 @@ Authentication is currently handled via `localStorage` using an `authToken` and 
 |---|---|---|
 | `/` | Home | Public |
 | `/about` | About | Public |
+| `/athletes` | Athletes Listing | Public |
+| `/player` | Player Profile | Public |
+| `/live-events` | Live Events | Public |
+| `/gallery` | Gallery | Public |
 | `/admin` | Login | Public |
 | `/admin/dashboard` | Admin Dashboard | Protected |
 | `/admin/athletes` | Athletes Management | Protected |
