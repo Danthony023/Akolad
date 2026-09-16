@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import RectangleDesign from "../../assets/images/RectangleDesign.png";
-import RectangleDesign2 from "../../assets/images/RectangleDesign2.png";
+import RectangleDesign from "../../assets/images/rectangleDesign.png";
+import RectangleDesign2 from "../../assets/images/rectangleDesign2.png";
 import { ArrowRight, Eye, EyeOff, Lock, User, Shield } from "lucide-react";
 import { useAuth } from "../../AuthContext";
 
@@ -138,7 +138,7 @@ export default function Login() {
             </div>
 
             {/* Login Form */}
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form className="space-y-6 md:mx-[20vw]" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
                   Username

@@ -1,21 +1,13 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import Home1 from "../assets/images/Home1.png";
-import RectangleDesign from "../assets/images/RectangleDesign.png";
-import RectangleDesign2 from "../assets/images/RectangleDesign2.png";
-import HighlightBg from "../assets/images/highlight-bg.png";
-import Highlight1 from "../assets/images/highlight1.png";
-import Highlight2 from "../assets/images/highlight2.png";
-import Highlight3 from "../assets/images/highlight3.png";
-import Gallery1 from "../assets/images/gallery1.png";
-import Gallery2 from "../assets/images/gallery2.png";
-import Gallery3 from "../assets/images/gallery3.png";
-import Gallery4 from "../assets/images/gallery4.png";
-import { ArrowRight } from "lucide-react";
+import Home1 from "../assets/images/home1.png";
+import RectangleDesign from "../assets/images/rectangleDesign.png";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const achievements = [
     {
       title: "200+ Athletes Trained",
@@ -53,9 +45,7 @@ const About = () => {
     <div className="min-h-screen bg-white font-oswald w-full flex flex-col">
       <Navbar />
       <main className="flex-1 md:py-8 space-y-12">
-        {/* section 1 */}
         <section className="grid md:grid-cols-7 items-centers gap-12 bg-white">
-          {/* <section className="grid grid-cols-2 grid rtl items-center gap-4 bg-white"> */}
           <img
             src={RectangleDesign}
             alt="Logo"
@@ -65,11 +55,6 @@ const About = () => {
 
           <div className="md:mt-10 col-span-3 flex flex-col items-end w-full">
             <div className="relative">
-              {/* Background boxes */}
-              {/* <div className="absolute -top-14 right-0 bg-primary h-[202px] w-3/5 z-0" /> */}
-              {/* <div className="absolute -bottom-18 -left-18 bg-primary h-[202px] w-[309px] z-0" /> */}
-
-              {/* Image with higher z-index */}
               <div className="md:h-3/4 rounded-2xl w-auto overflow-hidden">
                 <img
                   src={Home1}
@@ -103,9 +88,6 @@ const About = () => {
             </div>{" "}
           </div>
         </section>
-
-        {/* <div className="w-full h-4 bg-red-100 absolute top-0 left-0"></div> */}
-
         <div className="relative mt-32 ">
           <div className="relative pt-8  pb-16 w-full mx-auto flex justify-start ">
             <div className="absolute -top-10 left-1/8">
@@ -116,23 +98,19 @@ const About = () => {
             </div>
             <div className="relative ">
               <div className="relative bg-red-200 py-18 rounded-r-[5rem] p-12 md:pl-52 max-w-4xl z-10">
-                {/* Mission statement text */}
                 <p className="text-gray-800 leading-relaxed text-md !z-10">
                   To be a leading sports development academy that nurtures and
                   empowers athletes to reach their full potential, inspiring
                   excellence and global recognition in the world of sports
                 </p>
               </div>
-              <div className="absolute -top-8 -right-10 bg-primary h-[102px] w-[302px] -z-0" />
+              <div className="absolute -top-8 md:-right-10 right-0 bg-primary h-[102px] w-[302px] -z-0" />
             </div>
           </div>
         </div>
-
-        {/* Mission statement content area */}
-        {/* Main content area with the pink/salmon background and rounded left corner */}
         <div className="relative">
-          <div className="relative pt-8  pb-16 w-full mx-auto flex justify-end ">
-            <div className="absolute -top-8 right-20">
+          <div className="relative pt-8 md:pt-0  pb-16 w-full mx-auto flex justify-end ">
+            <div className="absolute -top-12 right-20">
               <h4 className="text-4xl font-bold mb-4">
                 <span>Our</span>
                 <span className="text-primary">{" Mission"}</span>
@@ -140,7 +118,6 @@ const About = () => {
             </div>
             <div className="relative ">
               <div className="relative py-18 bg-red-200 rounded-l-[5rem] p-12 max-w-4xl !z-10">
-                {/* Mission statement text */}
                 <p className="text-gray-800 leading-relaxed text-md !z-10">
                   At<span className="font-bold"> ACOLAD CONCEPTS</span>, our
                   mission is to provide a structured and professional platform
@@ -156,7 +133,7 @@ const About = () => {
           </div>
         </div>
         <div className="relative overflow-hidden">
-        <img
+          <img
             src={RectangleDesign}
             alt="Logo"
             className="-right-10 z-2 absolute rotate-180"
@@ -176,13 +153,14 @@ const About = () => {
                     <h3 className="font-bold text-lg mb-2">
                       {achievement.title}
                     </h3>
-                    <p className="text-gray-700 w-4/5">{achievement.description}</p>
+                    <p className="text-gray-700 w-4/5">
+                      {achievement.description}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-       
         </div>
       </main>
       <Footer />

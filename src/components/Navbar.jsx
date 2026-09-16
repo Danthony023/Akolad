@@ -63,7 +63,7 @@ export default function Navbar() {
             Athletes
           </div>
           <div
-            onClick={() => navigate("/events")}
+            onClick={() => navigate("/live-events")}
             className={`cursor-pointer hover:text-primary ${
               isActive("/events") ? "text-primary" : ""
             }`}
